@@ -1,0 +1,6 @@
+version: '2'
+services:
+  memo-service:
+      image: templecloud/memo-service:0.0.1
+      ports:
+        - "8080:8080"
