@@ -10,7 +10,6 @@
   <artifactId>xepsa-parent-pom</artifactId>
   <packaging>pom</packaging>
 
-
   <name>xepsa-memoservice-parent-pom</name>
   <description>Parent Pom for the xepsa memoservice  project</description>
 
@@ -19,10 +18,12 @@
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>1.4.4.RELEASE</version>
   </parent>
+
   <modules>
     <module>memoservice</module>
     <module>configserver</module>
   </modules>
+
   <build>
     <plugins>
       <plugin>
