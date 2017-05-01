@@ -63,6 +63,19 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
     </dependency>
+    <!-- encryption / decryption libraries -->
+    <dependency>
+      <groupId>org.springframework.security</groupId>
+      <artifactId>spring-security-rsa</artifactId>
+    </dependency>
+    <!-- === test dependencies === -->
+    <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <version>1.5.3.RELEASE</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <properties>

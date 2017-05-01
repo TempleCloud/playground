@@ -1,30 +1,41 @@
 package com.xepsa.memo.services;
 
+import com.xepsa.memo.config.ServiceConfig;
 import com.xepsa.memo.model.Memo;
+import com.xepsa.memo.repository.MemoRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
+@RefreshScope
 public class MemoService {
 
-    public Memo getMemo(String MemoId){
-        return new Memo()
-                .withId(MemoId)
-                .withUserId(UUID.randomUUID().toString())
-                .withMessage("Some Message");
+    @Autowired
+    private MemoRepository memoRepository;
+
+    @Autowired
+    ServiceConfig config;
+
+
+    public Memo getMemo(String memoId){
+        Memo memo = memoRepository.findById(memoId);
+        return memo.withExtraInfo(config.getExampleProperty());
     }
 
-    public void saveMemo(Memo Memo) {
-
+    public void saveMemo(Memo memo) {
+        memo.withId(UUID.randomUUID().toString());
+        memoRepository.save(memo);
     }
 
-    public void updateMemo(Memo Memo) {
-
+    public void updateMemo(Memo memo) {
+        memoRepository.save(memo);
     }
 
-    public void deleteMemo(Memo Memo) {
-
+    public void deleteMemo(Memo memo) {
+        memoRepository.delete(memo.getId());
     }
 
 }

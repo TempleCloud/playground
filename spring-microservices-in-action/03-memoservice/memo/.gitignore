@@ -20,3 +20,5 @@
 **/target/
 
 .DS_Store
+
+secret_env.sh

@@ -28,28 +28,11 @@ spring:
   cloud:
     config:
       server:
+          # disable server-side encryption
+          encrypt.enabled: false
           native:
              searchLocations: file:///${user.dir}/src/main/resources/config/memoservice
 
-#server:
-#  port: 8888
-#spring:
-#  profiles:
-#    active: native
-#  cloud:
-#    config:
-#      server:
-#          native:
-#             searchLocations: file:///Users/Temple/Work/dev/github/tutorials/spring-microservices-in-action/03-memoservice/memo/configserver/src/main/resources/config/memoservice
-
-#server:
-#  port: 8888
-#spring:
-#  cloud:
-#    config:
-#      server:
-#        git:
-#          uri: https://github.com/spring-cloud-samples/config-repo
 
 #---------------------------------------------------------------------------------------------------
 # classpath and file-based configurations

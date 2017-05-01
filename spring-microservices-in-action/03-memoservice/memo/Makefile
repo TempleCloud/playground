@@ -11,13 +11,13 @@ clean:
 	docker rmi templecloud/memo-service:0.0.1
 	docker rmi templecloud/memo-config-server:0.0.1
 
-start:
+dc-start:
 	docker-compose -f ./docker/common/docker-compose.yml up
 
 check:
 	@curl ${instance}/v1/user/fake-user-id/memo/fake-memo-id ;echo
 
-stop:
+dc-stop:
 	docker-compose -f ./docker/common/docker-compose.yml down
 
 

@@ -14,3 +14,5 @@ git.properties
 .idea
 *.iml
 .factorypath
+
+secret_env.sh
