@@ -24,7 +24,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Brixton.RELEASE</version>
+        <version>Camden.SR5</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
@@ -63,11 +63,17 @@
       <groupId>com.h2database</groupId>
       <artifactId>h2</artifactId>
     </dependency>
-    <!-- encryption / decryption libraries -->
+    <!-- config encryption / decryption libraries -->
     <dependency>
       <groupId>org.springframework.security</groupId>
       <artifactId>spring-security-rsa</artifactId>
     </dependency>
+    <!-- service discovery libraries -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-eureka</artifactId>
+    </dependency>
+
     <!-- === test dependencies === -->
     <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test -->
     <dependency>
@@ -76,6 +82,7 @@
       <version>1.5.3.RELEASE</version>
       <scope>test</scope>
     </dependency>
+
   </dependencies>
 
   <properties>

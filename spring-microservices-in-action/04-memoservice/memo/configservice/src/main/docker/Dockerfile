@@ -1,6 +1,6 @@
 FROM openjdk:8-jdk-alpine
 RUN apk update && apk upgrade && apk add netcat-openbsd && apk add curl
-RUN mkdir -p /usr/local/configservice
+RUN mkdir -p /usr/local/config-service
 
 # ensure oracle jce encryption jars are installed in java runtime
 RUN echo $JAVA_HOME
@@ -10,7 +10,7 @@ RUN cd /tmp/ \
     && rm jce_policy-8.zip \
     && yes |cp -v /tmp/UnlimitedJCEPolicyJDK8/*.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/
 
-ADD  @project.build.finalName@.jar /usr/local/configservice/
+ADD  @project.build.finalName@.jar /usr/local/config-service/
 ADD run.sh run.sh
 RUN chmod +x run.sh
 CMD ./run.sh
