@@ -10,7 +10,7 @@ RUN cd /tmp/ \
     && rm jce_policy-8.zip \
     && yes |cp -v /tmp/UnlimitedJCEPolicyJDK8/*.jar /usr/lib/jvm/java-1.8-openjdk/jre/lib/security/
 
-ADD  @project.build.finalName@.jar /usr/local/configserver/
+ADD  @project.build.finalName@.jar /usr/local/configservice/
 ADD run.sh run.sh
 RUN chmod +x run.sh
 CMD ./run.sh

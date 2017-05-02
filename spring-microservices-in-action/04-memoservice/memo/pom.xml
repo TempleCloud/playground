@@ -21,7 +21,7 @@
 
   <modules>
     <module>memoservice</module>
-    <module>configserver</module>
+    <module>configservice</module>
   </modules>
 
   <build>
