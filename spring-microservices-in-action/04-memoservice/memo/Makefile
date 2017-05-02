@@ -9,7 +9,7 @@ build:
 clean:
 	mvn clean
 	docker rmi templecloud/memo-service:0.0.1
-	docker rmi templecloud/memo-config-server:0.0.1
+	docker rmi templecloud/memo-config-service:0.0.1
 
 dc-start:
 	docker-compose -f ./docker/common/docker-compose.yml up

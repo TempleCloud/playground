@@ -1,7 +1,7 @@
 version: '2'
 services:
-  memo-config-server:
-      image: templecloud/memo-config-server:0.0.1
+  config-service:
+      image: templecloud/memo-config-service:0.0.1
       ports:
         - "8888:8888"
   memo-service:
