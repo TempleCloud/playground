@@ -1,0 +1,10 @@
+# contains application service name, uri, and other info.
+
+spring:
+  application:
+    name: memoservice
+  profiles:
+    active: default
+  cloud:
+    config:
+      uri: http://localhost:8888
