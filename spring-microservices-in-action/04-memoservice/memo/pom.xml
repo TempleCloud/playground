@@ -20,8 +20,10 @@
   </parent>
 
   <modules>
-    <module>memoservice</module>
     <module>configservice</module>
+    <module>discoveryservice</module>
+    <module>memoservice</module>
+    <module>userservice</module>
   </modules>
 
   <build>

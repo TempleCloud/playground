@@ -1,4 +1,4 @@
-package com.xepsa.memo;
+package com.xepsa.user;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -20,7 +20,7 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
-    @RequestMapping(value="/{toEcho}",method = RequestMethod.GET)
+    @RequestMapping(value="/user/{toEcho}",method = RequestMethod.GET)
     @RefreshScope   // enable config refresh enpoint: http://<yourserver>:<port>/refresh
     public String hello( @PathVariable("toEcho") String toEcho) {
         return String.format("{\"message\":\"%s\"}", toEcho);

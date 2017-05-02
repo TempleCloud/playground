@@ -22,6 +22,7 @@
 
 server:
   port: 8888
+
 spring:
   profiles:
     active: native
@@ -31,7 +32,9 @@ spring:
           # disable server-side encryption
           encrypt.enabled: false
           native:
-             searchLocations: file:///${user.dir}/src/main/resources/config/memoservice
+             searchLocations: file:///${user.dir}/src/main/resources/config/userservice,
+                              file:///${user.dir}/src/main/resources/config/memoservice
+
 
 
 #---------------------------------------------------------------------------------------------------
