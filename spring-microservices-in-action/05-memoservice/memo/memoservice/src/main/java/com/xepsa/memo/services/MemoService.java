@@ -1,6 +1,7 @@
 package com.xepsa.memo.services;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.xepsa.memo.config.ServiceConfig;
 import com.xepsa.memo.model.Memo;
 import com.xepsa.memo.repository.MemoRepository;
@@ -21,7 +22,20 @@ public class MemoService {
     @Autowired
     ServiceConfig config;
 
-    @HystrixCommand
+    // curl http://localhost:8081/v1/user/user-id/memo/memo-id
+    @HystrixCommand(
+            fallbackMethod = "handleGetMemoFailure",
+            threadPoolKey = "licenseByOrgThreadPool",
+            threadPoolProperties = {
+                    @HystrixProperty(name = "coreSize", value="30"),
+                    @HystrixProperty(name ="maxQueueSize", value="10")
+            },
+            commandProperties = {
+                    @HystrixProperty(
+                            name="execution.isolation.thread.timeoutInMilliseconds",
+                            value="6000")
+            }
+    )
     public Memo getMemo(String memoId) {
         simulateIntermittentLongRunningInvocation();
         // Memo memo = memoRepository.findById(memoId);
@@ -42,6 +56,14 @@ public class MemoService {
         memoRepository.delete(memo.getId());
     }
 
+
+    private Memo handleGetMemoFailure(String memoId) {
+        final String title = "Failed to retrieved Memo";
+        final String message = "Failed to retrieved Memo. This should probably be an exception.";
+        return new Memo().
+                withTitle(title).
+                withMessage(message);
+    }
 
     private Memo mockMemo() {
         final String id = UUID.randomUUID().toString();
