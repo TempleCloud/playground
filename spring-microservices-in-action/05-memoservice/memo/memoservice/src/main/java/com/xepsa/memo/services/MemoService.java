@@ -3,8 +3,11 @@ package com.xepsa.memo.services;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.xepsa.memo.config.ServiceConfig;
+import com.xepsa.memo.context.UserContextHolder;
 import com.xepsa.memo.model.Memo;
 import com.xepsa.memo.repository.MemoRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
@@ -16,6 +19,8 @@ import java.util.UUID;
 @RefreshScope
 public class MemoService {
 
+    private static final Logger logger = LoggerFactory.getLogger(MemoService.class);
+
     @Autowired
     private MemoRepository memoRepository;
 
@@ -23,6 +28,7 @@ public class MemoService {
     ServiceConfig config;
 
     // curl http://localhost:8081/v1/user/user-id/memo/memo-id
+    // https://github.com/Netflix/Hystrix/wiki/Configuration
     @HystrixCommand(
             fallbackMethod = "handleGetMemoFailure",
             threadPoolKey = "licenseByOrgThreadPool",
@@ -32,13 +38,32 @@ public class MemoService {
             },
             commandProperties = {
                     @HystrixProperty(
-                            name="execution.isolation.thread.timeoutInMilliseconds",
-                            value="6000")
+                            name="execution.isolation.strategy",
+                            value="SEMAPHORE"),
+                    @HystrixProperty(
+                            name = "execution.isolation.thread.timeoutInMilliseconds",
+                            value = "6000"),
+                    @HystrixProperty(
+                            name = "circuitBreaker.requestVolumeThreshold",
+                            value = "10"),
+                    @HystrixProperty(
+                            name = "circuitBreaker.errorThresholdPercentage",
+                            value = "75"),
+                    @HystrixProperty(
+                            name = "circuitBreaker.sleepWindowInMilliseconds",
+                            value = "7000"),
+                    @HystrixProperty(
+                            name = "metrics.rollingStats.timeInMilliseconds",
+                            value = "15000"),
+                    @HystrixProperty(
+                            name = "metrics.rollingStats.numBuckets",
+                            value = "5")
             }
     )
     public Memo getMemo(String memoId) {
         simulateIntermittentLongRunningInvocation();
         // Memo memo = memoRepository.findById(memoId);
+        logger.info("CorrelationId: " + UserContextHolder.getContext().getCorrelationId());
         Memo memo = mockMemo();
         return memo.withExtraInfo(config.getExampleProperty());
     }
