@@ -1,0 +1,55 @@
+# read on boot - contains local config server configuration
+
+#---------------------------------------------------------------------------------------------------
+# git based configuration
+
+#server:
+#  port: 8888
+#spring:
+#  cloud:
+#    config:
+#      server:
+#        encrypt.enabled: false
+#        git:
+#          uri: https://github.com/templecloud/config-repo/
+#          searchPaths: memoservice
+#          username: XXX
+#          password: XXX
+
+
+#---------------------------------------------------------------------------------------------------
+# localhost file-based configurations
+
+server:
+  port: 8888
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+          # disable server-side encryption
+          encrypt.enabled: false
+          native:
+             searchLocations: file:///${user.dir}/src/main/resources/config/userservice,
+                              file:///${user.dir}/src/main/resources/config/memoservice
+
+
+
+#---------------------------------------------------------------------------------------------------
+# classpath and file-based configurations
+
+# server:
+#   port: 8888
+# spring:
+#   profiles:
+#     active: native
+#   cloud:
+#     config:
+#       server:
+#           native:
+#              searchLocations: file://${project-home}/confsvr/src/main/resources/config/memoservice,
+#                               file://${project-home}/confsvr/src/main/resources/config/otherservice
+# or ...
+#              searchLocations: classpath:config/,classpath:config/memoservice

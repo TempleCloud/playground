@@ -1,0 +1,5 @@
+# contains application service name, uri, and other info.
+
+spring:
+  application:
+    name: configservice
