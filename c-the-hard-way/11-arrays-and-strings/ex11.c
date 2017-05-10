@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, char **argv) {
 
@@ -54,17 +55,23 @@ int main(int argc, char **argv) {
     printf("name_3 as char elements: %c %c %c %c\n", name_3[0], name_3[1], name_3[2], name_3[3]);
     printf("name_3 as string: %s\n", name_3);
 
-    int *x = (int *) name_3;
-    printf("name_3 as int: %i\n", x);
-
+    // convert the name_3 array into an int!!!
+    char *src = &name_3;
+    int* name_3_int;
+    memcpy(src, name_3_int, 4);
+    printf("name_3 as memcpy int: %i\n", *name_3_int);
 
     // break name_3 by over-writing the null terminator
     // name_3[3] = 'X';
     // Bus error: 10
     // printf("broken name_3 as string: %s\n", name_3);
 
-    // name_4[4] = {'a','a','a','a'};
+    // break with bad initializer
+    char name_4[4] = {'T','i','m','X', 'X'};
+    printf("broken name_4 as string: %s\n", name_4);
 
+    int name_5[4] = {'T','i','m','X', 'X'};
+    printf("broken name_5 as string: %s\n", name_5);
 
 
 }
