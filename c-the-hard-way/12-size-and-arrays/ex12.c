@@ -28,5 +28,4 @@ int main(int argc, char *argv[]) {
     printf("The sizeof first full_name cell is  : %ld\n", sizeof(full_name[0]));
     printf("The sizeof second full_name cell is : %ld\n", sizeof(full_name[1]));
 
-    
 }
