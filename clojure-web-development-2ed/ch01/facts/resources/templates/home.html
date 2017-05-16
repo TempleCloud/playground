@@ -28,6 +28,9 @@
                  name="side_1"
                  value=""/>
         </p>
+        {% if errors.side_1 %}
+        <div class="alert alert-danger">{{errors.side_1|join}}</div>
+        {% endif %}
         <p>
           Back:
           <textarea class="form-control"
@@ -36,6 +39,9 @@
                     name="side_2">
           </textarea>
         </p>
+        {% if errors.side_2 %}
+        <div class="alert alert-danger">{{errors.side_2|join}}</div>
+        {% endif %}
         <input type="submit"
                class="btn btn-primary"
                value="Add fact"/>
