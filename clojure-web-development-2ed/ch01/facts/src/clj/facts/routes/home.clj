@@ -2,7 +2,7 @@
   (:require [clojure.java.io :as io]
             [bouncer.core :as b]
             [bouncer.validators :as v]
-            [compojure.core :refer [defroutes GET POST]]
+            [compojure.core :refer [defroutes GET POST DELETE]]
             [ring.util.http-response :as response])
   (:require [facts.db.core :as db]
             [facts.layout :as layout]))
@@ -29,6 +29,7 @@
     :side_1  [v/required [v/min-count 1]]
     :side_2  [v/required [v/min-count 1]])))
 
+
 (defn save-fact!
   [{:keys [params]}]
   (if-let [errors (validate-fact params)]
@@ -41,9 +42,26 @@
             (assoc :timestamp (java.util.Date.))))
       (response/found "/"))))
 
+(defn validate-fact-id
+  [params]
+  (first
+    (b/validate
+      params
+      :id v/required)))
+
+(defn delete-fact!
+  [{:keys [params]}]
+  (if-let [errors (validate-fact-id params)]
+    (-> (response/found "/")
+      (assoc :flash (assoc params :errors errors))))
+    (db/delete-fact! params)
+      (response/ok {:deleted  true
+                    :redirect "/"}))
+
 (defroutes
   home-routes
   (GET "/" request (home-page request))
   (POST "/fact" request (save-fact! request))
+  (DELETE "/fact" request (delete-fact! request))
   (GET "/about" [] (about-page)))
 

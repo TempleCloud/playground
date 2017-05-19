@@ -29,3 +29,8 @@ VALUES (:user_id, :side_1, :side_2, :timestamp)
 -- :name get-facts :? :*
 -- :doc selects all available facts
 SELECT * from fact
+
+-- :name delete-fact! :! :n
+-- :doc delete a fact given the id
+DELETE FROM fact
+WHERE id = :id
