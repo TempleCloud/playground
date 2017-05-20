@@ -26,6 +26,7 @@
                  [org.webjars/font-awesome "4.7.0"]
                  [org.webjars/jquery "3.1.1"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
+                 [reagent "0.5.1"]
                  [ring-webjars "0.1.1"]
                  [ring/ring-core "1.6.0"]
                  [ring/ring-defaults "0.3.0"]

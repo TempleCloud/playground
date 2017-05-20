@@ -32,15 +32,16 @@ body {
   }
 }
 .content {
-  background: white;
-  width: 520px;
+    background: white;
+    width: 520px;
+    padding: 30px;
 }
-form, .error {
-  width: 520px;
-  padding: 30px;
-  margin-bottom: 50px;
-  position: relative;
-  background: white;
+.error {
+    width: 520px;
+    padding: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    background: white;
 }
 ul {
 list-style: none;
