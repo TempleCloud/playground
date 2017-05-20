@@ -1,0 +1,1 @@
+web: java $JVM_OPTS -cp target/uberjar/facts.jar clojure.main -m facts.core
