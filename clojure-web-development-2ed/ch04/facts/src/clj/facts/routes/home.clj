@@ -3,7 +3,8 @@
             [bouncer.core :as b]
             [bouncer.validators :as v]
             [compojure.core :refer [defroutes GET POST DELETE]]
-            [ring.util.http-response :as response])
+            [ring.util.http-response :as response]
+            [ring.util.response :refer [response status]])
   (:require [facts.db.core :as db]
             [facts.layout :as layout]))
 
@@ -29,18 +30,20 @@
     :side_1  [v/required [v/min-count 1]]
     :side_2  [v/required [v/min-count 1]])))
 
-
 (defn save-fact!
   [{:keys [params]}]
   (if-let [errors (validate-fact params)]
-    (-> (response/found "/")
-      (assoc :flash (assoc params :errors errors)))
-    (do
+    (response/bad-request {:errors errors})
+    (try
       (db/save-fact!
         (-> params
-            (assoc :user_id 1)
-            (assoc :timestamp (java.util.Date.))))
-      (response/found "/"))))
+          (assoc :timestamp (java.util.Date.))
+          (assoc :user_id 1)))
+      (response/ok {:status :ok})
+      (catch Exception e
+        (println "exception: " e)
+        (response/internal-server-error
+          {:errors {:server-error ["Failed to save fact!"]}})))))
 
 (defn validate-fact-id
   [params]

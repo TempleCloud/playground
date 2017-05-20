@@ -20,6 +20,7 @@
 </script>
 
 <div id="content"></div>
+<input id="token" type="hidden" value="{{csrf-token}}">
 
 <div class="row">
   <div class="span12">
@@ -40,7 +41,7 @@
   </div>
 </div>
 
-<div class="row">
+<!-- <div class="row">
   <div class="span12">
     <form method="POST"
           action="/fact">
@@ -72,6 +73,6 @@
       </div>
     </form>
   </div>
-</div>
+</div> -->
 
 {% endblock %}
