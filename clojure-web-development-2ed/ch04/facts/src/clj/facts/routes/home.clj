@@ -61,10 +61,22 @@
       (response/ok {:deleted  true
                     :redirect "/"}))
 
+;(defroutes
+;  home-routes
+;  (GET "/" request (home-page request))
+;  (POST "/fact" request (save-fact! request))
+;  (DELETE "/fact" request (delete-fact! request))
+;  (GET "/about" [] (about-page)))
+
+(defn home-page [] (layout/render "home.html"))
+
 (defroutes
   home-routes
-  (GET "/" request (home-page request))
+  (GET "/" [] (home-page))
+  (GET "/fact" [] (response/ok (db/get-facts)))
   (POST "/fact" request (save-fact! request))
   (DELETE "/fact" request (delete-fact! request))
   (GET "/about" [] (about-page)))
+
+
 
