@@ -35,9 +35,9 @@
          :params @fields
          :handler #(do
                      ;(.log js/console (str "response:" %))
-                     (reset! errors nil)
                      (swap! facts conj (assoc @fields :timestamp (js/Date.)))
-                     )
+                     (reset! fields {})
+                     (reset! errors nil))
          :error-handler #(do
                            (.error js/console (str "error:" %))
                            (reset! errors (get-in % [:response :errors])))}))
