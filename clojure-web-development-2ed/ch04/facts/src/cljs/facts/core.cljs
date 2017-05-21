@@ -8,6 +8,20 @@
     [:div.alert.alert-danger (clojure.string/join error)]))
 
 
+(defn delete-fact!
+  [id facts]
+  (DELETE "/fact"
+          {:headers {"Accept"       "application/transit+json"
+                     "x-csrf-token" (.-value (.getElementById js/document "token"))}
+           :params {:id id}
+           :handler (fn
+                      [response]
+                      (do
+                        (.log js/console (str "DELETE response:" response))
+                        (if (:deleted response)
+                          (reset! facts (remove (fn [fact] (= id (:id fact))) @facts))
+                          facts)))}))
+
 (defn get-facts
   [facts]
   (GET
@@ -19,12 +33,16 @@
   [facts]
   [:ul.content
    (for
-     [{:keys [timestamp side_1 side_2]} @facts]
+     [{:keys [timestamp id side_1 side_2]} @facts]
       ^{:key timestamp}
       [:li
        [:time (.toLocaleString timestamp)]
        [:p side_1]
-       [:p side_2]])])
+       [:p side_2]
+       [:input.btn.btn-primary {:type :submit
+                                :on-click #(delete-fact! id facts)
+                                :value "delete fact"}]
+       ])])
 
 (defn save-fact!
   [fields errors facts]
