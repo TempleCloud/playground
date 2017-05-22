@@ -9,10 +9,10 @@ int main(int argc, char *argv[]) {
     };
 
     // size of ages
-    int ages_size = sizeof(ages) / sizeof(int);
+    int count = sizeof(ages) / sizeof(int);
 
     // 1. array index method
-    for (int i = 0; i < ages_size; i++) {
+    for (int i = 0; i < count; i++) {
         printf("%s has rotated around the Sun %i times!\n", 
                 names[i], ages[i]);
     }
@@ -24,7 +24,7 @@ int main(int argc, char *argv[]) {
     int *cur_age = ages;
     char **cur_name = names;
 
-    for (int i = 0; i < ages_size; i++) {
+    for (int i = 0; i < count; i++) {
         printf("%s has rotated around the Sun %i times!\n", 
                 *(cur_name + i) , *(cur_age + i));
     }
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
 
     // 3. Pointers can be used contiguously as an array
 
-    for (int i = 0; i < ages_size; i++) {
+    for (int i = 0; i < count; i++) {
         printf("%s has rotated around the Sun %i times!\n", 
                 cur_name[i], cur_age[i]);
     }
@@ -42,14 +42,25 @@ int main(int argc, char *argv[]) {
 
     // 4. Pointers can be used in a crazy complex way!
 
-    for (cur_name = names, cur_age = ages; (cur_age - ages) < ages_size; cur_age++) {
+    for (cur_name = names, cur_age = ages; (cur_age - ages) < count; cur_age++) {
         printf("%s has rotated around the Sun %i times!\n", 
                 *cur_name, *cur_age);
     }
 
+    printf("---\n");
+
+    //--- print address
+    printf("address of ages[]   : %p\n", &ages);
+    for (int i = 0; i < count; i++) {
+        printf("address of ages[%i]  : %p\n", i,  &ages[i]);
+    }
+    printf("address of names[]  : %p\n", &names);
+    for (int i = 0; i < count; i++) {
+        printf("address of names[%i] : %p\n", i,  &names[i]);
+    }
+
 
     // Pointer Lexicon ------
-    
     // an integer pointer
     int *ptr;
     // dereference the value of a pointer
@@ -63,7 +74,7 @@ int main(int argc, char *argv[]) {
     int *some_val_ptr = &some_val;
     // increment the pointer address
     ptr++;
-
+    
 
 
 }
