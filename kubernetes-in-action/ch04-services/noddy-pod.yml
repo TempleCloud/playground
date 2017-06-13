@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: noddy-pod
+spec:
+  containers:
+  - image: templecloud/noddy-lite
+    name: noddy-app
+    ports:
+    - containerPort: 80
+      protocol: TCP
+  
