@@ -1,7 +1,7 @@
 create:
-	kubectl create -f noddy-service.yml
-	kubectl create -f noddy-pod.yml
-	kubectl scale pods noddy-pod --replicas=3
+	kubectl create -f kubia-service.yml
+	kubectl create -f kubia-pod.yml
+	kubectl scale pods kubia-pod --replicas=3
 
 delete:
 	kubectl delete pods --all

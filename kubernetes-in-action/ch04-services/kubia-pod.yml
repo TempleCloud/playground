@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: noddy-pod
+  name: kubia
 spec:
   containers:
-  - image: templecloud/noddy-lite
-    name: noddy-app
+  - image: templecloud/kubia
+    name: kubia
     ports:
     - containerPort: 80
       protocol: TCP

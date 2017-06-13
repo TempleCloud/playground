@@ -1,11 +1,11 @@
 piVersion: v1
 kind: Service
 metadata:
-  name: noddy-service
+  name: kubia
 spec:
   sessionAffinity: ClientIP
   ports:
   - port: 80
     targetPort: 8080
   selector:
-    app: noddy
+    app: kubia
