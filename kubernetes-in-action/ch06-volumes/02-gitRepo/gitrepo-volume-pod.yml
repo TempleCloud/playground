@@ -13,6 +13,18 @@ spec:
     ports:
     - containerPort: 80
       protocol: TCP
+   #   - image: templecloud/git-sync:v2.0.5-1-g5a523aa
+   #     name: git-syncer
+   #     volumeMounts:
+   #     - name: html
+   #       mountPath: /usr/share/nginx/html
+   #     env:
+   #     - name: GIT_SYNC_REPO
+   #       value: https://github.com/noddy-apps/noddy-static-html-site.git
+   #       #    - name: GIT_SYNC_BRANCH
+   #       #      value: master
+   #       #    - name: GIT_SYNC_WAIT
+   #       #      value: 10
   volumes:
   - name: html
     gitRepo:
