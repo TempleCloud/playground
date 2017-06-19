@@ -35,6 +35,13 @@ function gcloud_login() {
 	gcloud config set project ${gpid}
 }
 
+function gcloud_cluster_login() {
+    gcloud container clusters \
+        get-credentials ${k8s_name}\
+        --project ${gpid} \
+        --zone ${k8s_zone}
+}
+
 function gcloud_cluster_create() {
 	gcloud container \
   		--project ${gpid} \
@@ -50,10 +57,6 @@ function gcloud_cluster_destroy() {
   		--project ${gpid} \
   	clusters delete ${k8s_name} \
   		--zone ${k8s_zone}
-}
-
-function gcloud_cluster_login() {
-	gcloud container clusters get-credentials ${k8s_name}
 }
 
 function gcloud_forwarding_rules() {
@@ -86,9 +89,24 @@ function k8s_deploy() {
 	kubectl create -f mongodb-service.yml
 	kubectl create -f notes-app-controller.yml
 	kubectl create -f notes-app-service.yml
+    gcloud_forwarding_rules
 }
 
 function k8s_clean() {
-	kubectl delete pods,services --all
+	kubectl delete svc,rc,po --all
+}
+
+
+#---------------------------------------------------------------------------------------------------
+# top-level
+
+function k8s_up() {
+    gcloud_cluster_create
+    gcloud_disk_create
+}
+
+function k8s_down() {
+    gcloud_cluster_destroy
+    gcloud_disk_destroy
 }
 
