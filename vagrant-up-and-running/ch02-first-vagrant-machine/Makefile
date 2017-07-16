@@ -14,10 +14,22 @@ up:
 ssh:
 	vagrant ssh
 
+suspend:
+	vagrant suspend
+
+halt:
+	vagrant halt
+
 destory:
 	vagrant destroy
 
+reload:
+	vagrant reload
+
 status:
+	vagrant status
+
+global-status:
 	vagrant gabal-status
 
 add-box:
