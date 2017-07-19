@@ -1,0 +1,9 @@
+zuul.ignored-services: '*'
+zuul.prefix: /api
+zuul.routes.userservice: /user/**
+zuul.routes.memoservice: /memo/**
+zuul.debug.request: true
+# fine grained timeout overrides
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 2500
+hystrix.command.memogservice.execution.isolation.thread.timeoutInMilliseconds: 3000
+memogservice.ribbon.ReadTimeout: 7000
