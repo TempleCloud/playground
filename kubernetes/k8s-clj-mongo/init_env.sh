@@ -85,8 +85,8 @@ function gcloud_disk_destroy() {
 # kubectl
 
 function k8s_deploy() {
-	kubectl create -f mongodb-controller.yml
-	kubectl create -f mongodb-service.yml
+	kubectl create -f mongo-controller.yml
+	kubectl create -f mongo-service.yml
 	kubectl create -f notes-app-controller.yml
 	kubectl create -f notes-app-service.yml
     gcloud_forwarding_rules
