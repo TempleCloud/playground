@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>Loading CSV Data</title>
+  </head>
+  <body>
+    <script>
+      // Define a function that used the inary '+' operator 
+      // to convert the csv string values to numeric values.
+      const row = d => {
+        d.petalLength = +d.petalLength;
+        d.petalWidth = +d.petalWidth;
+        d.sepalLength = +d.sepalLength;
+        d.sepalWidth = +d.sepalWidth;
+        return d;
+      };
+      d3.csv('iris-data.csv', row, data => {
+        console.log(data);
+        // Display data
+        d3.select('body')
+          .append('pre')
+            .text(JSON.stringify(data, null, 2))
+            .style('font-size', '3em')
+            .style('margin-top', 0);
+      });
+    </script>
+  </body>
+</html>
