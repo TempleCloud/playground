@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <title>Basic Scatter Plot</title>
+  </head>
+  <body>
+    <svg width="960" height="500"></svg>
+    <script>
+      // Create dom svg element references
+	  const svg = d3.select('svg');
+      const width = svg.attr('width');
+      const height = svg.attr('height');
+
+	  // Define getter functions
+      const xValue = d => d.sepalLength;
+      const yValue = d => d.petalLength;
+
+	  // Create linear scales
+      const xScale = d3.scaleLinear();
+      const yScale = d3.scaleLinear();
+
+      // Define a function that uses the binary '+' operator 
+      // to convert the csv string values to numeric values.
+      const rowToJSON = d => {
+        console.log("row d: " + JSON.stringify(d));
+        d.petalLength = +d.petalLength;
+        d.petalWidth = +d.petalWidth;
+        d.sepalLength = +d.sepalLength;
+        d.sepalWidth = +d.sepalWidth;
+        console.log("row d2: " + JSON.stringify(d));
+        return d;
+      };
+
+      d3.csv('iris-data.csv', rowToJSON, data => {
+
+        // create horizontal scale
+        xScale
+		  // domain is the range of values 0 - max(data)
+          .domain(d3.extent(data, xValue))
+		  // range is the display element size.
+          .range([0, width]);
+		// create the vertical scale
+        yScale
+          .domain(d3.extent(data, yValue))
+          // NB: UI element y-axis from top left
+		  .range([height, 0]);
+
+		// Plot the points
+        svg.selectAll('circle').data(data)
+          .enter().append('circle')
+            .attr('cx', d => xScale(xValue(d)))
+            .attr('cy', d => yScale(yValue(d)))
+            .attr('r', 8);        
+      });
+    </script>
+  </body>
+</html>
