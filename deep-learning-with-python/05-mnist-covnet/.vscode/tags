@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+activate_this.py	../venv/bin/activate_this.py	1;"	kind:file	line:1
+base	../venv/bin/activate_this.py	/^base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:19
+layers	../mnist-covnet.py	/^from keras import layers$/;"	kind:namespace	line:2
+loss	../mnist-covnet.py	/^                loss='categorical_crossentropy',$/;"	kind:variable	line:50
+metrics	../mnist-covnet.py	/^                metrics=['accuracy'])$/;"	kind:variable	line:51
+mnist	../mnist-covnet.py	/^from keras.datasets import mnist$/;"	kind:namespace	line:3
+mnist-covnet.py	../mnist-covnet.py	1;"	kind:file	line:1
+models	../mnist-covnet.py	/^from keras import models$/;"	kind:namespace	line:1
+network	../mnist-covnet.py	/^network = models.Sequential()$/;"	kind:variable	line:42
+new_sys_path	../venv/bin/activate_this.py	/^new_sys_path = []$/;"	kind:variable	line:30
+old_os_path	../venv/bin/activate_this.py	/^old_os_path = os.environ.get('PATH', '')$/;"	kind:variable	line:17
+os	../venv/bin/activate_this.py	/^import os$/;"	kind:namespace	line:15
+prev_sys_path	../venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:24
+site	../venv/bin/activate_this.py	/^import site$/;"	kind:namespace	line:25
+site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'Lib', 'site-packages')$/;"	kind:variable	line:21
+site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'lib', 'python%s' % sys.version[:3], 'site-packages')$/;"	kind:variable	line:23
+sleep	../mnist-covnet.py	/^from time import sleep$/;"	kind:namespace	line:6
+sys	../venv/bin/activate_this.py	/^import sys$/;"	kind:namespace	line:14
+test_images	../mnist-covnet.py	/^test_images = test_images.astype('float32') \/ 255$/;"	kind:variable	line:23
+test_images	../mnist-covnet.py	/^test_images = test_images.reshape((10000, 28 * 28))$/;"	kind:variable	line:22
+test_labels	../mnist-covnet.py	/^test_labels = to_categorical(test_labels)$/;"	kind:variable	line:34
+to_categorical	../mnist-covnet.py	/^from keras.utils import to_categorical$/;"	kind:namespace	line:4
+train_images	../mnist-covnet.py	/^train_images = train_images.astype('float32') \/ 255$/;"	kind:variable	line:21
+train_images	../mnist-covnet.py	/^train_images = train_images.reshape((60000, 28 * 28))$/;"	kind:variable	line:20
+train_labels	../mnist-covnet.py	/^train_labels = to_categorical(train_labels)$/;"	kind:variable	line:33

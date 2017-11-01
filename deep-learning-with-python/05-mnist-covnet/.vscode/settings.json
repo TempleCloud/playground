@@ -1,0 +1,10 @@
+{
+    "python.venvPath": "${workspaceRoot}/venv",
+    "python.pythonPath": "${workspaceRoot}/venv/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintPath": "/Users/Temple/Work/dev/github/templecloud/tutorials/deep-learning-with-python/05-mnist-covnet/venv/bin/pylint",
+    "python.linting.pep8Path": "/Users/Temple/Work/dev/github/templecloud/tutorials/deep-learning-with-python/05-mnist-covnet/venv/bin/pep8",
+    "python.linting.flake8Path": "/Users/Temple/Work/dev/github/templecloud/tutorials/deep-learning-with-python/05-mnist-covnet/venv/bin/flake8"
+}
