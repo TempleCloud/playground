@@ -1,0 +1,10 @@
+{
+    "python.venvPath": "${workspaceRoot}/venv",
+    "python.pythonPath": "${workspaceRoot}/venv/bin/python3",
+    "python.linting.pylintEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintPath": "${workspaceRoot}/venv/bin/pylint",
+    "python.linting.pep8Path": "${workspaceRoot}/venv/bin/pep8",
+    "python.linting.flake8Path": "${workspaceRoot}/venv/bin/flake8"
+}
