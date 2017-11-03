@@ -11,7 +11,7 @@ def ensure_dir(path):
 workspace_dir = os.path.dirname(os.path.realpath(__file__))
 print("workspace_dir        :", workspace_dir)
 
-# # The path to the directory where the original dataset was uncompressed
+# # The path to the train directory where the original dataset was uncompressed
 original_dataset_dir = workspace_dir + '/data/train'
 print("original_dataset_dir :", original_dataset_dir)
 
@@ -94,3 +94,17 @@ for fname in fnames:
     src = os.path.join(original_dataset_dir, fname)
     dst = os.path.join(test_dogs_dir, fname)
     shutil.copyfile(src, dst)
+
+# Validate
+print('total training cat images:', len(os.listdir(train_cats_dir)))
+assert len(os.listdir(train_cats_dir)) == 1000
+print('total training dog images:', len(os.listdir(train_dogs_dir)))
+assert len(os.listdir(train_dogs_dir)) == 1000
+print('total validation cat images:', len(os.listdir(validation_cats_dir)))
+assert len(os.listdir(validation_cats_dir)) == 500
+print('total validation dog images:', len(os.listdir(validation_dogs_dir)))
+assert len(os.listdir(validation_dogs_dir)) == 500
+print('total test cat images:', len(os.listdir(test_cats_dir)))
+assert len(os.listdir(test_cats_dir)) == 500
+print('total test dog images:', len(os.listdir(test_dogs_dir)))
+assert len(os.listdir(test_dogs_dir)) == 500
