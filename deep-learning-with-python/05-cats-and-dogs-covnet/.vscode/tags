@@ -4,29 +4,81 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+ImageDataGenerator	../cats-and-dogs-covnet.py	/^from keras.preprocessing.image import ImageDataGenerator$/;"	kind:namespace	line:7
+acc	../cats-and-dogs-covnet.py	/^acc = history.history['acc']$/;"	kind:variable	line:96
 activate_this.py	../venv/bin/activate_this.py	1;"	kind:file	line:1
 base	../venv/bin/activate_this.py	/^base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:19
-layers	../mnist-covnet.py	/^from keras import layers$/;"	kind:namespace	line:2
-loss	../mnist-covnet.py	/^              loss='categorical_crossentropy',$/;"	kind:variable	line:72
-metrics	../mnist-covnet.py	/^              metrics=['accuracy'])$/;"	kind:variable	line:73
-mnist	../mnist-covnet.py	/^from keras.datasets import mnist$/;"	kind:namespace	line:3
-mnist-covnet.py	../mnist-covnet.py	1;"	kind:file	line:1
-model	../mnist-covnet.py	/^model = models.Sequential()$/;"	kind:variable	line:52
-models	../mnist-covnet.py	/^from keras import models$/;"	kind:namespace	line:1
+base_dir	../cats-and-dogs-covnet.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:16
+base_dir	../prepare-data.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:19
+batch_size	../cats-and-dogs-covnet.py	/^        batch_size=20,$/;"	kind:variable	line:33
+batch_size	../cats-and-dogs-covnet.py	/^        batch_size=20,$/;"	kind:variable	line:40
+cats-and-dogs-covnet.py	../cats-and-dogs-covnet.py	1;"	kind:file	line:1
+class_mode	../cats-and-dogs-covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:35
+class_mode	../cats-and-dogs-covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:41
+dst	../prepare-data.py	/^    dst = os.path.join(test_cats_dir, fname)$/;"	kind:variable	line:74
+dst	../prepare-data.py	/^    dst = os.path.join(test_dogs_dir, fname)$/;"	kind:variable	line:95
+dst	../prepare-data.py	/^    dst = os.path.join(train_dogs_dir, fname)$/;"	kind:variable	line:81
+dst	../prepare-data.py	/^    dst = os.path.join(validation_cats_dir, fname)$/;"	kind:variable	line:67
+dst	../prepare-data.py	/^    dst = os.path.join(validation_dogs_dir, fname)$/;"	kind:variable	line:88
+ensure_dir	../prepare-data.py	/^def ensure_dir(path):$/;"	kind:function	line:5
+epochs	../cats-and-dogs-covnet.py	/^      epochs=30,$/;"	kind:variable	line:87
+epochs	../cats-and-dogs-covnet.py	/^epochs = range(1, len(acc) + 1)$/;"	kind:variable	line:100
+fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:57
+fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:64
+fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:71
+fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:78
+fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:85
+fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:92
+history	../cats-and-dogs-covnet.py	/^history = model.fit_generator($/;"	kind:variable	line:84
+input_shape	../cats-and-dogs-covnet.py	/^                        input_shape=(150, 150, 3)))$/;"	kind:variable	line:56
+layers	../cats-and-dogs-covnet.py	/^from keras import layers$/;"	kind:namespace	line:4
+loss	../cats-and-dogs-covnet.py	/^loss = history.history['loss']$/;"	kind:variable	line:98
+matplotlib	../cats-and-dogs-covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:9
+metrics	../cats-and-dogs-covnet.py	/^              metrics=['acc'])$/;"	kind:variable	line:77
+model	../cats-and-dogs-covnet.py	/^model = models.Sequential()$/;"	kind:variable	line:53
+models	../cats-and-dogs-covnet.py	/^from keras import models$/;"	kind:namespace	line:3
 new_sys_path	../venv/bin/activate_this.py	/^new_sys_path = []$/;"	kind:variable	line:30
 old_os_path	../venv/bin/activate_this.py	/^old_os_path = os.environ.get('PATH', '')$/;"	kind:variable	line:17
+optimizer	../cats-and-dogs-covnet.py	/^              optimizer=optimizers.RMSprop(lr=1e-4),$/;"	kind:variable	line:76
+optimizers	../cats-and-dogs-covnet.py	/^from keras import optimizers$/;"	kind:namespace	line:5
+original_dataset_dir	../prepare-data.py	/^original_dataset_dir = workspace_dir + '\/data\/train'$/;"	kind:variable	line:15
+os	../cats-and-dogs-covnet.py	/^import os$/;"	kind:namespace	line:1
+os	../prepare-data.py	/^import os$/;"	kind:namespace	line:1
 os	../venv/bin/activate_this.py	/^import os$/;"	kind:namespace	line:15
+plt	../cats-and-dogs-covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:9
 prepare-data.py	../prepare-data.py	1;"	kind:file	line:1
 prev_sys_path	../venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:24
+shutil	../prepare-data.py	/^import shutil$/;"	kind:namespace	line:2
 site	../venv/bin/activate_this.py	/^import site$/;"	kind:namespace	line:25
 site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'Lib', 'site-packages')$/;"	kind:variable	line:21
 site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'lib', 'python%s' % sys.version[:3], 'site-packages')$/;"	kind:variable	line:23
-sleep	../mnist-covnet.py	/^from time import sleep$/;"	kind:namespace	line:6
+src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:66
+src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:73
+src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:80
+src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:87
+src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:94
+steps_per_epoch	../cats-and-dogs-covnet.py	/^      steps_per_epoch=100,$/;"	kind:variable	line:86
 sys	../venv/bin/activate_this.py	/^import sys$/;"	kind:namespace	line:14
-test_images	../mnist-covnet.py	/^test_images = test_images.astype('float32') \/ 255$/;"	kind:variable	line:27
-test_images	../mnist-covnet.py	/^test_images = test_images.reshape((10000, 28, 28, 1))$/;"	kind:variable	line:26
-test_labels	../mnist-covnet.py	/^test_labels = to_categorical(test_labels)$/;"	kind:variable	line:42
-to_categorical	../mnist-covnet.py	/^from keras.utils import to_categorical$/;"	kind:namespace	line:4
-train_images	../mnist-covnet.py	/^train_images = train_images.astype('float32') \/ 255$/;"	kind:variable	line:25
-train_images	../mnist-covnet.py	/^train_images = train_images.reshape((60000, 28, 28, 1))$/;"	kind:variable	line:24
-train_labels	../mnist-covnet.py	/^train_labels = to_categorical(train_labels)$/;"	kind:variable	line:41
+target_size	../cats-and-dogs-covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:32
+target_size	../cats-and-dogs-covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:39
+test_cats_dir	../prepare-data.py	/^test_cats_dir = os.path.join(test_dir, 'cats')$/;"	kind:variable	line:49
+test_datagen	../cats-and-dogs-covnet.py	/^test_datagen = ImageDataGenerator(rescale=1.\/255)$/;"	kind:variable	line:27
+test_dir	../prepare-data.py	/^test_dir = os.path.join(base_dir, 'test1')$/;"	kind:variable	line:29
+test_dogs_dir	../prepare-data.py	/^test_dogs_dir = os.path.join(test_dir, 'dogs')$/;"	kind:variable	line:53
+train_cats_dir	../prepare-data.py	/^train_cats_dir = os.path.join(train_dir, 'cats')$/;"	kind:variable	line:33
+train_datagen	../cats-and-dogs-covnet.py	/^train_datagen = ImageDataGenerator(rescale=1.\/255)$/;"	kind:variable	line:26
+train_dir	../cats-and-dogs-covnet.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:17
+train_dir	../prepare-data.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:25
+train_dogs_dir	../prepare-data.py	/^train_dogs_dir = os.path.join(train_dir, 'dogs')$/;"	kind:variable	line:37
+train_generator	../cats-and-dogs-covnet.py	/^train_generator = train_datagen.flow_from_directory($/;"	kind:variable	line:29
+val_acc	../cats-and-dogs-covnet.py	/^val_acc = history.history['val_acc']$/;"	kind:variable	line:97
+val_loss	../cats-and-dogs-covnet.py	/^val_loss = history.history['val_loss']$/;"	kind:variable	line:99
+validation_cats_dir	../prepare-data.py	/^validation_cats_dir = os.path.join(validation_dir, 'cats')$/;"	kind:variable	line:41
+validation_data	../cats-and-dogs-covnet.py	/^      validation_data=validation_generator,$/;"	kind:variable	line:88
+validation_dir	../cats-and-dogs-covnet.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:18
+validation_dir	../prepare-data.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:27
+validation_dogs_dir	../prepare-data.py	/^validation_dogs_dir = os.path.join(validation_dir, 'dogs')$/;"	kind:variable	line:45
+validation_generator	../cats-and-dogs-covnet.py	/^validation_generator = test_datagen.flow_from_directory($/;"	kind:variable	line:37
+validation_steps	../cats-and-dogs-covnet.py	/^      validation_steps=50)$/;"	kind:variable	line:89
+workspace_dir	../cats-and-dogs-covnet.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:15
+workspace_dir	../prepare-data.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:11
