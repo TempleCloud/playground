@@ -62,6 +62,7 @@ pip3 install scipy==0.19.1
 pip3 install pyaml==17.10.0
 pip3 install matplotlib==2.1.0
 pip3 install h5py==2.7.1
+pip3 install pillow==4.3.0
 # install tensor-flow - https://www.tensorflow.org/install/install_mac
 pip3 install \
     --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.3.0-py3-none-any.whl
