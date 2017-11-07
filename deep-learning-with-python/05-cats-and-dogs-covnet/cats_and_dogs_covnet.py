@@ -6,9 +6,6 @@ from keras import layers
 from keras import optimizers
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
-from keras.applications import VGG16
-
-import numpy as np
 
 import matplotlib.pyplot as plt
 
