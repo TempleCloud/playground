@@ -69,5 +69,6 @@ pip3 install \
 # pip3 install \
 #     --upgrade https://storage.googleapis.com/tensorflow/mac/cpu/protobuf-3.1.0-cp35-none-macosx_10_11_x86_64.whl
 pip3 install keras==2.0.8
-
+# pip install --upgrade google-cloud
+pip install google-cloud-storage
 

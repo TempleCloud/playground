@@ -1,6 +1,10 @@
 {
     "python.venvPath": "${workspaceRoot}/venv",
     "python.pythonPath": "${workspaceRoot}/venv/bin/python3",
+    "python.autoComplete.extraPaths": [
+        "${workspaceRoot}/venv/python3.6",
+        "${workspaceRoot}/venv/python3.6/site-packages"
+    ],
     "python.linting.pylintEnabled": false,
     "python.linting.pep8Enabled": true,
     "python.linting.flake8Enabled": true,

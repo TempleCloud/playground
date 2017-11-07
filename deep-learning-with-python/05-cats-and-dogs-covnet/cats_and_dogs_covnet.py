@@ -4,9 +4,11 @@ import datetime
 from keras import models
 from keras import layers
 from keras import optimizers
-
 from keras.preprocessing import image
 from keras.preprocessing.image import ImageDataGenerator
+from keras.applications import VGG16
+
+import numpy as np
 
 import matplotlib.pyplot as plt
 
@@ -17,29 +19,28 @@ def ensure_dir(path):
 
 
 def demo_gen_augmented(datagen, image_dir):
-        fnames = [os.path.join(image_dir, fname) for fname in os.listdir(
-                image_dir)]
-        # We pick one image to "augment"
-        img_path = fnames[3]
-        # Read the image and resize it
-        img = image.load_img(img_path, target_size=(150, 150))
-        # Convert it to a Numpy array with shape (150, 150, 3)
-        x = image.img_to_array(img)
-        # Reshape it to (1, 150, 150, 3)
-        x = x.reshape((1,) + x.shape)
-        # The .flow() command below generates batches of randomly transformed 
-        # images. 
-        # It will loop indefinitely, so we need to `break` the loop at some 
-        # point!
-        i = 0
-        for batch in datagen.flow(x, batch_size=1):
-                plt.figure(i)
-                plt.imshow(image.array_to_img(batch[0]))
-                i += 1
-                if i % 4 == 0:
-                        break
-        plt.show()
-        exit
+    fnames = [os.path.join(image_dir, fname)
+              for fname in os.listdir(image_dir)]
+    # We pick one image to "augment"
+    img_path = fnames[3]
+    # Read the image and resize it
+    img = image.load_img(img_path, target_size=(150, 150))
+    # Convert it to a Numpy array with shape (150, 150, 3)
+    x = image.img_to_array(img)
+    # Reshape it to (1, 150, 150, 3)
+    x = x.reshape((1,) + x.shape)
+    # The .flow() command below generates batches of randomly transformed
+    # images.
+    # It will loop indefinitely, so we need to `break` the loop at some point!
+    i = 0
+    for batch in datagen.flow(x, batch_size=1):
+        plt.figure(i)
+        plt.imshow(image.array_to_img(batch[0]))
+        i += 1
+        if i % 4 == 0:
+            break
+    plt.show()
+    exit
 
 
 # -----------------------------------------------------------------------------
@@ -50,12 +51,14 @@ base_dir = workspace_dir + '/data_small'
 train_dir = os.path.join(base_dir, 'train')
 validation_dir = os.path.join(base_dir, 'validation')
 
+test_dir = os.path.join(base_dir, 'test')
+
 model_dir = os.path.join(workspace_dir, 'models')
 ensure_dir(model_dir)
 
 # -----------------------------------------------------------------------------
 # Data Input Generators
-# 
+#
 # All images will be rescaled by 1./255
 #
 # train_datagen = ImageDataGenerator(rescale=1./255)

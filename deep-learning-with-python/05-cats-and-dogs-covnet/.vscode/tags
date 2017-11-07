@@ -4,81 +4,311 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-ImageDataGenerator	../cats-and-dogs-covnet.py	/^from keras.preprocessing.image import ImageDataGenerator$/;"	kind:namespace	line:7
-acc	../cats-and-dogs-covnet.py	/^acc = history.history['acc']$/;"	kind:variable	line:96
-activate_this.py	../venv/bin/activate_this.py	1;"	kind:file	line:1
-base	../venv/bin/activate_this.py	/^base = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))$/;"	kind:variable	line:19
-base_dir	../cats-and-dogs-covnet.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:16
-base_dir	../prepare-data.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:19
-batch_size	../cats-and-dogs-covnet.py	/^        batch_size=20,$/;"	kind:variable	line:33
-batch_size	../cats-and-dogs-covnet.py	/^        batch_size=20,$/;"	kind:variable	line:40
-cats-and-dogs-covnet.py	../cats-and-dogs-covnet.py	1;"	kind:file	line:1
-class_mode	../cats-and-dogs-covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:35
-class_mode	../cats-and-dogs-covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:41
-dst	../prepare-data.py	/^    dst = os.path.join(test_cats_dir, fname)$/;"	kind:variable	line:74
-dst	../prepare-data.py	/^    dst = os.path.join(test_dogs_dir, fname)$/;"	kind:variable	line:95
-dst	../prepare-data.py	/^    dst = os.path.join(train_dogs_dir, fname)$/;"	kind:variable	line:81
-dst	../prepare-data.py	/^    dst = os.path.join(validation_cats_dir, fname)$/;"	kind:variable	line:67
-dst	../prepare-data.py	/^    dst = os.path.join(validation_dogs_dir, fname)$/;"	kind:variable	line:88
-ensure_dir	../prepare-data.py	/^def ensure_dir(path):$/;"	kind:function	line:5
-epochs	../cats-and-dogs-covnet.py	/^      epochs=30,$/;"	kind:variable	line:87
-epochs	../cats-and-dogs-covnet.py	/^epochs = range(1, len(acc) + 1)$/;"	kind:variable	line:100
-fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:57
-fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:64
-fnames	../prepare-data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:71
-fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:78
-fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:85
-fnames	../prepare-data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:92
-history	../cats-and-dogs-covnet.py	/^history = model.fit_generator($/;"	kind:variable	line:84
-input_shape	../cats-and-dogs-covnet.py	/^                        input_shape=(150, 150, 3)))$/;"	kind:variable	line:56
-layers	../cats-and-dogs-covnet.py	/^from keras import layers$/;"	kind:namespace	line:4
-loss	../cats-and-dogs-covnet.py	/^loss = history.history['loss']$/;"	kind:variable	line:98
-matplotlib	../cats-and-dogs-covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:9
-metrics	../cats-and-dogs-covnet.py	/^              metrics=['acc'])$/;"	kind:variable	line:77
-model	../cats-and-dogs-covnet.py	/^model = models.Sequential()$/;"	kind:variable	line:53
-models	../cats-and-dogs-covnet.py	/^from keras import models$/;"	kind:namespace	line:3
-new_sys_path	../venv/bin/activate_this.py	/^new_sys_path = []$/;"	kind:variable	line:30
-old_os_path	../venv/bin/activate_this.py	/^old_os_path = os.environ.get('PATH', '')$/;"	kind:variable	line:17
-optimizer	../cats-and-dogs-covnet.py	/^              optimizer=optimizers.RMSprop(lr=1e-4),$/;"	kind:variable	line:76
-optimizers	../cats-and-dogs-covnet.py	/^from keras import optimizers$/;"	kind:namespace	line:5
-original_dataset_dir	../prepare-data.py	/^original_dataset_dir = workspace_dir + '\/data\/train'$/;"	kind:variable	line:15
-os	../cats-and-dogs-covnet.py	/^import os$/;"	kind:namespace	line:1
-os	../prepare-data.py	/^import os$/;"	kind:namespace	line:1
-os	../venv/bin/activate_this.py	/^import os$/;"	kind:namespace	line:15
-plt	../cats-and-dogs-covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:9
-prepare-data.py	../prepare-data.py	1;"	kind:file	line:1
-prev_sys_path	../venv/bin/activate_this.py	/^prev_sys_path = list(sys.path)$/;"	kind:variable	line:24
-shutil	../prepare-data.py	/^import shutil$/;"	kind:namespace	line:2
-site	../venv/bin/activate_this.py	/^import site$/;"	kind:namespace	line:25
-site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'Lib', 'site-packages')$/;"	kind:variable	line:21
-site_packages	../venv/bin/activate_this.py	/^site_packages = os.path.join(base, 'lib', 'python%s' % sys.version[:3], 'site-packages')$/;"	kind:variable	line:23
-src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:66
-src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:73
-src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:80
-src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:87
-src	../prepare-data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:94
-steps_per_epoch	../cats-and-dogs-covnet.py	/^      steps_per_epoch=100,$/;"	kind:variable	line:86
-sys	../venv/bin/activate_this.py	/^import sys$/;"	kind:namespace	line:14
-target_size	../cats-and-dogs-covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:32
-target_size	../cats-and-dogs-covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:39
-test_cats_dir	../prepare-data.py	/^test_cats_dir = os.path.join(test_dir, 'cats')$/;"	kind:variable	line:49
-test_datagen	../cats-and-dogs-covnet.py	/^test_datagen = ImageDataGenerator(rescale=1.\/255)$/;"	kind:variable	line:27
-test_dir	../prepare-data.py	/^test_dir = os.path.join(base_dir, 'test1')$/;"	kind:variable	line:29
-test_dogs_dir	../prepare-data.py	/^test_dogs_dir = os.path.join(test_dir, 'dogs')$/;"	kind:variable	line:53
-train_cats_dir	../prepare-data.py	/^train_cats_dir = os.path.join(train_dir, 'cats')$/;"	kind:variable	line:33
-train_datagen	../cats-and-dogs-covnet.py	/^train_datagen = ImageDataGenerator(rescale=1.\/255)$/;"	kind:variable	line:26
-train_dir	../cats-and-dogs-covnet.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:17
-train_dir	../prepare-data.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:25
-train_dogs_dir	../prepare-data.py	/^train_dogs_dir = os.path.join(train_dir, 'dogs')$/;"	kind:variable	line:37
-train_generator	../cats-and-dogs-covnet.py	/^train_generator = train_datagen.flow_from_directory($/;"	kind:variable	line:29
-val_acc	../cats-and-dogs-covnet.py	/^val_acc = history.history['val_acc']$/;"	kind:variable	line:97
-val_loss	../cats-and-dogs-covnet.py	/^val_loss = history.history['val_loss']$/;"	kind:variable	line:99
-validation_cats_dir	../prepare-data.py	/^validation_cats_dir = os.path.join(validation_dir, 'cats')$/;"	kind:variable	line:41
-validation_data	../cats-and-dogs-covnet.py	/^      validation_data=validation_generator,$/;"	kind:variable	line:88
-validation_dir	../cats-and-dogs-covnet.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:18
-validation_dir	../prepare-data.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:27
-validation_dogs_dir	../prepare-data.py	/^validation_dogs_dir = os.path.join(validation_dir, 'dogs')$/;"	kind:variable	line:45
-validation_generator	../cats-and-dogs-covnet.py	/^validation_generator = test_datagen.flow_from_directory($/;"	kind:variable	line:37
-validation_steps	../cats-and-dogs-covnet.py	/^      validation_steps=50)$/;"	kind:variable	line:89
-workspace_dir	../cats-and-dogs-covnet.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:15
-workspace_dir	../prepare-data.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:11
+BdfFontFile	../venv/bin/pilfont.py	/^from PIL import BdfFontFile$/;"	kind:namespace	line:19
+Enhance	../venv/bin/enhancer.py	/^class Enhance(tkinter.Frame):$/;"	kind:class	line:23
+Image	../venv/bin/enhancer.py	/^from PIL import Image, ImageTk, ImageEnhance$/;"	kind:namespace	line:17
+Image	../venv/bin/explode.py	/^from PIL import Image$/;"	kind:namespace	line:11
+Image	../venv/bin/gifmaker.py	/^from PIL import Image$/;"	kind:namespace	line:19
+Image	../venv/bin/painter.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:19
+Image	../venv/bin/pilconvert.py	/^from PIL import Image$/;"	kind:namespace	line:22
+Image	../venv/bin/pildriver.py	/^from PIL import Image$/;"	kind:namespace	line:53
+Image	../venv/bin/pilfile.py	/^from PIL import Image$/;"	kind:namespace	line:27
+Image	../venv/bin/pilprint.py	/^from PIL import Image$/;"	kind:namespace	line:22
+Image	../venv/bin/player.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:16
+Image	../venv/bin/thresholder.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:17
+Image	../venv/bin/viewer.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:16
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:356
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:364
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:374
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:384
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:394
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:404
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:414
+ImageChops	../venv/bin/pildriver.py	/^        from PIL import ImageChops$/;"	kind:namespace	line:426
+ImageDataGenerator	../cats_and_dogs_covnet.py	/^from keras.preprocessing.image import ImageDataGenerator$/;"	kind:namespace	line:9
+ImageEnhance	../venv/bin/enhancer.py	/^from PIL import Image, ImageTk, ImageEnhance$/;"	kind:namespace	line:17
+ImageEnhance	../venv/bin/pildriver.py	/^        from PIL import ImageEnhance$/;"	kind:namespace	line:440
+ImageEnhance	../venv/bin/pildriver.py	/^        from PIL import ImageEnhance$/;"	kind:namespace	line:451
+ImageEnhance	../venv/bin/pildriver.py	/^        from PIL import ImageEnhance$/;"	kind:namespace	line:462
+ImageEnhance	../venv/bin/pildriver.py	/^        from PIL import ImageEnhance$/;"	kind:namespace	line:473
+ImageFilter	../venv/bin/pildriver.py	/^        from PIL import ImageFilter$/;"	kind:namespace	line:210
+ImageTk	../venv/bin/enhancer.py	/^from PIL import Image, ImageTk, ImageEnhance$/;"	kind:namespace	line:17
+ImageTk	../venv/bin/painter.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:19
+ImageTk	../venv/bin/player.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:16
+ImageTk	../venv/bin/thresholder.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:17
+ImageTk	../venv/bin/viewer.py	/^from PIL import Image, ImageTk$/;"	kind:namespace	line:16
+Interval	../venv/bin/explode.py	/^class Interval(object):$/;"	kind:class	line:16
+PILDriver	../venv/bin/pildriver.py	/^class PILDriver(object):$/;"	kind:class	line:56
+PSDraw	../venv/bin/pilprint.py	/^from PIL import PSDraw$/;"	kind:namespace	line:23
+PaintCanvas	../venv/bin/painter.py	/^class PaintCanvas(tkinter.Canvas):$/;"	kind:class	line:25
+PcfFontFile	../venv/bin/pilfont.py	/^from PIL import PcfFontFile$/;"	kind:namespace	line:20
+UI	../venv/bin/player.py	/^class UI(tkinter.Label):$/;"	kind:class	line:22
+UI	../venv/bin/thresholder.py	/^class UI(tkinter.Frame):$/;"	kind:class	line:23
+UI	../venv/bin/viewer.py	/^class UI(tkinter.Label):$/;"	kind:class	line:22
+VERSION	../venv/bin/pilfont.py	/^VERSION = "0.4"$/;"	kind:variable	line:22
+VERSION	../venv/bin/pilprint.py	/^VERSION = "pilprint 0.3\/2003-05-05"$/;"	kind:variable	line:20
+__getitem__	../venv/bin/explode.py	/^    def __getitem__(self, index):$/;"	kind:member	line:44
+__init__	../venv/bin/enhancer.py	/^    def __init__(self, master, image, name, enhancer, lo, hi):$/;"	kind:member	line:24
+__init__	../venv/bin/explode.py	/^    def __init__(self, interval="0"):$/;"	kind:member	line:18
+__init__	../venv/bin/painter.py	/^    def __init__(self, master, image):$/;"	kind:member	line:26
+__init__	../venv/bin/player.py	/^    def __init__(self, master, im):$/;"	kind:member	line:24
+__init__	../venv/bin/thresholder.py	/^    def __init__(self, master, im, value=128):$/;"	kind:member	line:24
+__init__	../venv/bin/viewer.py	/^    def __init__(self, master, im):$/;"	kind:member	line:24
+acc	../cats_and_dogs_covnet.py	/^acc = history.history['acc']$/;"	kind:variable	line:147
+base_dir	../cats_and_dogs_covnet.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:49
+base_dir	../prepare_data.py	/^base_dir = workspace_dir + '\/data_small'$/;"	kind:variable	line:19
+batch_size	../cats_and_dogs_covnet.py	/^        batch_size=20,$/;"	kind:variable	line:78
+batch_size	../cats_and_dogs_covnet.py	/^        batch_size=20,$/;"	kind:variable	line:85
+blob	../model_manager.py	/^    blob = bucket.blob(model_file)$/;"	kind:variable	line:35
+bucket	../model_manager.py	/^bucket = ensure_bucket(storage_client, bucket_name)$/;"	kind:variable	line:31
+bucket_name	../model_manager.py	/^bucket_name = 'dlwp-models'$/;"	kind:variable	line:30
+buckets	../model_manager.py	/^buckets = storage_client.list_buckets()$/;"	kind:variable	line:26
+cats_and_dogs_covnet.py	../cats_and_dogs_covnet.py	1;"	kind:file	line:1
+class_mode	../cats_and_dogs_covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:80
+class_mode	../cats_and_dogs_covnet.py	/^        class_mode='binary')$/;"	kind:variable	line:86
+convert	../venv/bin/pilconvert.py	/^convert = None$/;"	kind:variable	line:53
+datetime	../cats_and_dogs_covnet.py	/^import datetime$/;"	kind:namespace	line:2
+demo_gen_augmented	../cats_and_dogs_covnet.py	/^def demo_gen_augmented(datagen, image_dir):$/;"	kind:function	line:19
+description	../venv/bin/pilprint.py	/^def description(filepath, image):$/;"	kind:function	line:28
+do_add	../venv/bin/pildriver.py	/^    def do_add(self):$/;"	kind:member	line:409
+do_blend	../venv/bin/pildriver.py	/^    def do_blend(self):$/;"	kind:member	line:132
+do_brightness	../venv/bin/pildriver.py	/^    def do_brightness(self):$/;"	kind:member	line:457
+do_clear	../venv/bin/pildriver.py	/^    def do_clear(self):$/;"	kind:member	line:81
+do_color	../venv/bin/pildriver.py	/^    def do_color(self):$/;"	kind:member	line:435
+do_composite	../venv/bin/pildriver.py	/^    def do_composite(self):$/;"	kind:member	line:142
+do_contrast	../venv/bin/pildriver.py	/^    def do_contrast(self):$/;"	kind:member	line:446
+do_convert	../venv/bin/pildriver.py	/^    def do_convert(self):$/;"	kind:member	line:166
+do_copy	../venv/bin/pildriver.py	/^    def do_copy(self):$/;"	kind:member	line:175
+do_crop	../venv/bin/pildriver.py	/^    def do_crop(self):$/;"	kind:member	line:182
+do_darker	../venv/bin/pildriver.py	/^    def do_darker(self):$/;"	kind:member	line:369
+do_difference	../venv/bin/pildriver.py	/^    def do_difference(self):$/;"	kind:member	line:379
+do_draft	../venv/bin/pildriver.py	/^    def do_draft(self):$/;"	kind:member	line:195
+do_dup	../venv/bin/pildriver.py	/^    def do_dup(self):$/;"	kind:member	line:95
+do_filter	../venv/bin/pildriver.py	/^    def do_filter(self):$/;"	kind:member	line:205
+do_format	../venv/bin/pildriver.py	/^    def do_format(self):$/;"	kind:member	line:326
+do_getbbox	../venv/bin/pildriver.py	/^    def do_getbbox(self):$/;"	kind:member	line:215
+do_getextrema	../venv/bin/pildriver.py	/^    def do_getextrema(self):$/;"	kind:member	line:226
+do_invert	../venv/bin/pildriver.py	/^    def do_invert(self):$/;"	kind:member	line:351
+do_lighter	../venv/bin/pildriver.py	/^    def do_lighter(self):$/;"	kind:member	line:359
+do_merge	../venv/bin/pildriver.py	/^    def do_merge(self):$/;"	kind:member	line:152
+do_mode	../venv/bin/pildriver.py	/^    def do_mode(self):$/;"	kind:member	line:333
+do_multiply	../venv/bin/pildriver.py	/^    def do_multiply(self):$/;"	kind:member	line:389
+do_new	../venv/bin/pildriver.py	/^    def do_new(self):$/;"	kind:member	line:115
+do_offset	../venv/bin/pildriver.py	/^    def do_offset(self):$/;"	kind:member	line:235
+do_open	../venv/bin/pildriver.py	/^    def do_open(self):$/;"	kind:member	line:125
+do_paste	../venv/bin/pildriver.py	/^    def do_paste(self):$/;"	kind:member	line:245
+do_pop	../venv/bin/pildriver.py	/^    def do_pop(self):$/;"	kind:member	line:88
+do_resize	../venv/bin/pildriver.py	/^    def do_resize(self):$/;"	kind:member	line:261
+do_rotate	../venv/bin/pildriver.py	/^    def do_rotate(self):$/;"	kind:member	line:271
+do_save	../venv/bin/pildriver.py	/^    def do_save(self):$/;"	kind:member	line:280
+do_save2	../venv/bin/pildriver.py	/^    def do_save2(self):$/;"	kind:member	line:289
+do_screen	../venv/bin/pildriver.py	/^    def do_screen(self):$/;"	kind:member	line:399
+do_sharpness	../venv/bin/pildriver.py	/^    def do_sharpness(self):$/;"	kind:member	line:468
+do_show	../venv/bin/pildriver.py	/^    def do_show(self):$/;"	kind:member	line:299
+do_size	../venv/bin/pildriver.py	/^    def do_size(self):$/;"	kind:member	line:340
+do_subtract	../venv/bin/pildriver.py	/^    def do_subtract(self):$/;"	kind:member	line:421
+do_swap	../venv/bin/pildriver.py	/^    def do_swap(self):$/;"	kind:member	line:106
+do_thumbnail	../venv/bin/pildriver.py	/^    def do_thumbnail(self):$/;"	kind:member	line:306
+do_transpose	../venv/bin/pildriver.py	/^    def do_transpose(self):$/;"	kind:member	line:315
+do_verbose	../venv/bin/pildriver.py	/^    def do_verbose(self):$/;"	kind:member	line:60
+driver	../venv/bin/pildriver.py	/^    driver = PILDriver()$/;"	kind:variable	line:506
+dst	../prepare_data.py	/^    dst = os.path.join(test_cats_dir, fname)$/;"	kind:variable	line:74
+dst	../prepare_data.py	/^    dst = os.path.join(test_dogs_dir, fname)$/;"	kind:variable	line:95
+dst	../prepare_data.py	/^    dst = os.path.join(train_dogs_dir, fname)$/;"	kind:variable	line:81
+dst	../prepare_data.py	/^    dst = os.path.join(validation_cats_dir, fname)$/;"	kind:variable	line:67
+dst	../prepare_data.py	/^    dst = os.path.join(validation_dogs_dir, fname)$/;"	kind:variable	line:88
+enhancer.py	../venv/bin/enhancer.py	1;"	kind:file	line:1
+ensure_bucket	../model_manager.py	/^def ensure_bucket(storage_client, bucket_name):$/;"	kind:function	line:8
+ensure_dir	../cats_and_dogs_covnet.py	/^def ensure_dir(path):$/;"	kind:function	line:14
+ensure_dir	../prepare_data.py	/^def ensure_dir(path):$/;"	kind:function	line:5
+epochs	../cats_and_dogs_covnet.py	/^      epochs=50,$/;"	kind:variable	line:138
+epochs	../cats_and_dogs_covnet.py	/^epochs = range(1, len(acc) + 1)$/;"	kind:variable	line:151
+execute	../venv/bin/pildriver.py	/^    def execute(self, list):$/;"	kind:member	line:481
+explode.py	../venv/bin/explode.py	1;"	kind:file	line:1
+filename	../venv/bin/player.py	/^    filename = sys.argv[1]$/;"	kind:variable	line:77
+filename	../venv/bin/viewer.py	/^    filename = sys.argv[1]$/;"	kind:variable	line:46
+files	../venv/bin/pilfont.py	/^    files = files + glob.glob(f)$/;"	kind:variable	line:35
+files	../venv/bin/pilfont.py	/^files = []$/;"	kind:variable	line:33
+fill_mode	../cats_and_dogs_covnet.py	/^        fill_mode='nearest')$/;"	kind:variable	line:70
+fnames	../prepare_data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:57
+fnames	../prepare_data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:64
+fnames	../prepare_data.py	/^fnames = ['cat.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:71
+fnames	../prepare_data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000)]$/;"	kind:variable	line:78
+fnames	../prepare_data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1000, 1500)]$/;"	kind:variable	line:85
+fnames	../prepare_data.py	/^fnames = ['dog.{}.jpg'.format(i) for i in range(1500, 2000)]$/;"	kind:variable	line:92
+fp	../venv/bin/pilfont.py	/^        fp = open(f, "rb")$/;"	kind:variable	line:43
+fp	../venv/bin/pilprint.py	/^            fp = p.stdin$/;"	kind:variable	line:83
+fp	../venv/bin/pilprint.py	/^            fp = sys.stdout$/;"	kind:variable	line:85
+frames	../venv/bin/explode.py	/^frames = Interval(",".join(sys.argv[3:]))$/;"	kind:variable	line:77
+getopt	../venv/bin/pilconvert.py	/^import getopt$/;"	kind:namespace	line:18
+getopt	../venv/bin/pilfile.py	/^import getopt$/;"	kind:namespace	line:22
+getopt	../venv/bin/pilprint.py	/^import getopt$/;"	kind:namespace	line:15
+gifmaker.py	../venv/bin/gifmaker.py	1;"	kind:file	line:1
+glob	../venv/bin/pilfile.py	/^import glob$/;"	kind:namespace	line:23
+glob	../venv/bin/pilfont.py	/^import glob$/;"	kind:namespace	line:15
+globfix	../venv/bin/pilfile.py	/^def globfix(files):$/;"	kind:function	line:68
+height_shift_range	../cats_and_dogs_covnet.py	/^        height_shift_range=0.2,$/;"	kind:variable	line:66
+history	../cats_and_dogs_covnet.py	/^history = model.fit_generator($/;"	kind:variable	line:135
+horizontal_flip	../cats_and_dogs_covnet.py	/^        horizontal_flip=True,$/;"	kind:variable	line:69
+html	../venv/bin/explode.py	/^    html = 1$/;"	kind:variable	line:57
+html	../venv/bin/explode.py	/^    html = open(file+".html", "w")$/;"	kind:variable	line:92
+html	../venv/bin/explode.py	/^html = 0$/;"	kind:variable	line:54
+id	../venv/bin/pilfile.py	/^        id = sorted(Image.ID)$/;"	kind:variable	line:51
+im	../venv/bin/enhancer.py	/^im = Image.open(sys.argv[1])$/;"	kind:variable	line:55
+im	../venv/bin/explode.py	/^im = Image.open(infile)$/;"	kind:variable	line:88
+im	../venv/bin/gifmaker.py	/^    im = Image.open(sys.argv[1])$/;"	kind:variable	line:30
+im	../venv/bin/painter.py	/^    im = im.convert("RGB")$/;"	kind:variable	line:80
+im	../venv/bin/painter.py	/^im = Image.open(sys.argv[1])$/;"	kind:variable	line:77
+im	../venv/bin/pilconvert.py	/^        im = im.convert(convert)$/;"	kind:variable	line:92
+im	../venv/bin/pilconvert.py	/^    im = Image.open(argv[0])$/;"	kind:variable	line:89
+im	../venv/bin/pilfile.py	/^        im = Image.open(file)$/;"	kind:variable	line:82
+im	../venv/bin/pilprint.py	/^            im = im.convert("L")$/;"	kind:variable	line:79
+im	../venv/bin/pilprint.py	/^        im = Image.open(filepath)$/;"	kind:variable	line:73
+im	../venv/bin/thresholder.py	/^    im = im.convert("L")$/;"	kind:variable	line:74
+im	../venv/bin/thresholder.py	/^im = Image.open(sys.argv[1])$/;"	kind:variable	line:71
+im	../venv/bin/viewer.py	/^    im = Image.open(filename)$/;"	kind:variable	line:51
+image	../cats_and_dogs_covnet.py	/^from keras.preprocessing import image$/;"	kind:namespace	line:8
+infile	../venv/bin/explode.py	/^infile = sys.argv[1]$/;"	kind:variable	line:74
+input_shape	../cats_and_dogs_covnet.py	/^                        input_shape=(150, 150, 3)))$/;"	kind:variable	line:102
+ix	../venv/bin/explode.py	/^ix = 1$/;"	kind:variable	line:86
+layers	../cats_and_dogs_covnet.py	/^from keras import layers$/;"	kind:namespace	line:5
+letter	../venv/bin/pilprint.py	/^letter = (1.0*72, 1.0*72, 7.5*72, 10.0*72)$/;"	kind:variable	line:25
+logging	../venv/bin/pilfile.py	/^import logging$/;"	kind:namespace	line:24
+logging_level	../venv/bin/pilfile.py	/^        logging_level = "DEBUG"$/;"	kind:variable	line:63
+logging_level	../venv/bin/pilfile.py	/^logging_level = "WARNING"$/;"	kind:variable	line:46
+loss	../cats_and_dogs_covnet.py	/^loss = history.history['loss']$/;"	kind:variable	line:149
+matplotlib	../cats_and_dogs_covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+metrics	../cats_and_dogs_covnet.py	/^              metrics=['acc'])$/;"	kind:variable	line:125
+model	../cats_and_dogs_covnet.py	/^model = models.Sequential()$/;"	kind:variable	line:99
+model_dir	../cats_and_dogs_covnet.py	/^model_dir = os.path.join(workspace_dir, 'models')$/;"	kind:variable	line:53
+model_dir	../model_manager.py	/^model_dir = os.path.join(workspace_dir, 'models')$/;"	kind:variable	line:21
+model_files	../model_manager.py	/^model_files = os.listdir(model_dir)$/;"	kind:variable	line:33
+model_manager.py	../model_manager.py	1;"	kind:file	line:1
+model_name	../cats_and_dogs_covnet.py	/^model_name = 'cats_and_dogs_small_imggen_droput_' + now.strftime("%Y%m%d%H%M%S")$/;"	kind:variable	line:134
+models	../cats_and_dogs_covnet.py	/^from keras import models$/;"	kind:namespace	line:4
+monochrome	../venv/bin/pilprint.py	/^        monochrome = 0$/;"	kind:variable	line:62
+monochrome	../venv/bin/pilprint.py	/^monochrome = 1    # reduce file size for most common case$/;"	kind:variable	line:52
+next	../venv/bin/player.py	/^    def next(self):$/;"	kind:member	line:42
+now	../cats_and_dogs_covnet.py	/^now = datetime.datetime.now()$/;"	kind:variable	line:133
+optimizer	../cats_and_dogs_covnet.py	/^              optimizer=optimizers.RMSprop(lr=1e-4),$/;"	kind:variable	line:124
+optimizers	../cats_and_dogs_covnet.py	/^from keras import optimizers$/;"	kind:namespace	line:6
+options	../venv/bin/pilconvert.py	/^options = {}$/;"	kind:variable	line:55
+original_dataset_dir	../prepare_data.py	/^original_dataset_dir = workspace_dir + '\/data\/train'$/;"	kind:variable	line:15
+os	../cats_and_dogs_covnet.py	/^import os$/;"	kind:namespace	line:1
+os	../model_manager.py	/^import os$/;"	kind:namespace	line:1
+os	../prepare_data.py	/^import os$/;"	kind:namespace	line:1
+os	../venv/bin/explode.py	/^import os$/;"	kind:namespace	line:12
+os	../venv/bin/pilprint.py	/^import os$/;"	kind:namespace	line:16
+outfile	../venv/bin/explode.py	/^    outfile = file + "%03d" + ext$/;"	kind:variable	line:84
+outfile	../venv/bin/explode.py	/^outfile = sys.argv[2]$/;"	kind:variable	line:75
+output_format	../venv/bin/pilconvert.py	/^output_format = None$/;"	kind:variable	line:52
+p	../venv/bin/pilfont.py	/^            p = BdfFontFile.BdfFontFile(fp)$/;"	kind:variable	line:49
+p	../venv/bin/pilfont.py	/^            p = PcfFontFile.PcfFontFile(fp)$/;"	kind:variable	line:46
+p	../venv/bin/pilprint.py	/^            p = subprocess.Popen(printerArgs, stdin=subprocess.PIPE)$/;"	kind:variable	line:82
+paint	../venv/bin/painter.py	/^    def paint(self, event):$/;"	kind:member	line:45
+painter.py	../venv/bin/painter.py	1;"	kind:file	line:1
+pilconvert.py	../venv/bin/pilconvert.py	1;"	kind:file	line:1
+pildriver.py	../venv/bin/pildriver.py	1;"	kind:file	line:1
+pilfile.py	../venv/bin/pilfile.py	1;"	kind:file	line:1
+pilfont.py	../venv/bin/pilfont.py	1;"	kind:file	line:1
+pilprint.py	../venv/bin/pilprint.py	1;"	kind:file	line:1
+player.py	../venv/bin/player.py	1;"	kind:file	line:1
+plt	../cats_and_dogs_covnet.py	/^import matplotlib.pyplot as plt$/;"	kind:namespace	line:11
+prepare_data.py	../prepare_data.py	1;"	kind:file	line:1
+print_function	../venv/bin/explode.py	/^from __future__ import print_function$/;"	kind:namespace	line:9
+print_function	../venv/bin/gifmaker.py	/^from __future__ import print_function$/;"	kind:namespace	line:17
+print_function	../venv/bin/pilconvert.py	/^from __future__ import print_function$/;"	kind:namespace	line:16
+print_function	../venv/bin/pildriver.py	/^from __future__ import print_function$/;"	kind:namespace	line:51
+print_function	../venv/bin/pilfile.py	/^from __future__ import print_function$/;"	kind:namespace	line:20
+print_function	../venv/bin/pilfont.py	/^from __future__ import print_function$/;"	kind:namespace	line:13
+print_function	../venv/bin/pilprint.py	/^from __future__ import print_function$/;"	kind:namespace	line:14
+print_function	../venv/bin/player.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+print_function	../venv/bin/viewer.py	/^from __future__ import print_function$/;"	kind:namespace	line:7
+printerArgs	../venv/bin/pilprint.py	/^        printerArgs = ["lpr", "-P%s" % a]$/;"	kind:variable	line:68
+printerArgs	../venv/bin/pilprint.py	/^        printerArgs = ["lpr"]$/;"	kind:variable	line:65
+printerArgs	../venv/bin/pilprint.py	/^printerArgs = []  # print to stdout$/;"	kind:variable	line:51
+ps	../venv/bin/pilprint.py	/^        ps = PSDraw.PSDraw(fp)$/;"	kind:variable	line:87
+push	../venv/bin/pildriver.py	/^    def push(self, item):$/;"	kind:member	line:71
+quiet	../venv/bin/pilfile.py	/^        quiet = 1$/;"	kind:variable	line:59
+redraw	../venv/bin/thresholder.py	/^    def redraw(self, event=None):$/;"	kind:member	line:51
+repair	../venv/bin/painter.py	/^    def repair(self, box):$/;"	kind:member	line:55
+rescale	../cats_and_dogs_covnet.py	/^        rescale=1.\/255,$/;"	kind:variable	line:63
+root	../venv/bin/enhancer.py	/^root = tkinter.Tk()$/;"	kind:variable	line:53
+root	../venv/bin/painter.py	/^root = tkinter.Tk()$/;"	kind:variable	line:75
+root	../venv/bin/player.py	/^    root = tkinter.Tk()$/;"	kind:variable	line:79
+root	../venv/bin/thresholder.py	/^root = tkinter.Tk()$/;"	kind:variable	line:69
+root	../venv/bin/viewer.py	/^    root = tkinter.Tk()$/;"	kind:variable	line:48
+rotation_range	../cats_and_dogs_covnet.py	/^        rotation_range=40,$/;"	kind:variable	line:64
+setinterval	../venv/bin/explode.py	/^    def setinterval(self, interval):$/;"	kind:member	line:22
+shear_range	../cats_and_dogs_covnet.py	/^        shear_range=0.2,$/;"	kind:variable	line:67
+shutil	../prepare_data.py	/^import shutil$/;"	kind:namespace	line:2
+src	../prepare_data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:66
+src	../prepare_data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:73
+src	../prepare_data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:80
+src	../prepare_data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:87
+src	../prepare_data.py	/^    src = os.path.join(original_dataset_dir, fname)$/;"	kind:variable	line:94
+stack	../venv/bin/pildriver.py	/^    stack = []          # Stack of pending operations$/;"	kind:variable	line:69
+steps_per_epoch	../cats_and_dogs_covnet.py	/^      steps_per_epoch=100,$/;"	kind:variable	line:137
+storage	../model_manager.py	/^from google.cloud import storage$/;"	kind:namespace	line:2
+storage_client	../model_manager.py	/^storage_client = storage.Client()$/;"	kind:variable	line:24
+string	../venv/bin/pilconvert.py	/^import string$/;"	kind:namespace	line:19
+subprocess	../venv/bin/pilprint.py	/^import subprocess$/;"	kind:namespace	line:18
+sys	../venv/bin/enhancer.py	/^import sys$/;"	kind:namespace	line:10
+sys	../venv/bin/explode.py	/^import sys$/;"	kind:namespace	line:13
+sys	../venv/bin/gifmaker.py	/^    import sys$/;"	kind:namespace	line:23
+sys	../venv/bin/painter.py	/^import sys$/;"	kind:namespace	line:12
+sys	../venv/bin/pilconvert.py	/^import sys$/;"	kind:namespace	line:20
+sys	../venv/bin/pildriver.py	/^    import sys$/;"	kind:namespace	line:501
+sys	../venv/bin/pilfile.py	/^import sys$/;"	kind:namespace	line:25
+sys	../venv/bin/pilfont.py	/^import sys$/;"	kind:namespace	line:16
+sys	../venv/bin/pilprint.py	/^import sys$/;"	kind:namespace	line:17
+sys	../venv/bin/player.py	/^import sys$/;"	kind:namespace	line:9
+sys	../venv/bin/thresholder.py	/^import sys$/;"	kind:namespace	line:10
+sys	../venv/bin/viewer.py	/^import sys$/;"	kind:namespace	line:9
+target_size	../cats_and_dogs_covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:77
+target_size	../cats_and_dogs_covnet.py	/^        target_size=(150, 150),$/;"	kind:variable	line:84
+test_cats_dir	../prepare_data.py	/^test_cats_dir = os.path.join(test_dir, 'cats')$/;"	kind:variable	line:49
+test_datagen	../cats_and_dogs_covnet.py	/^test_datagen = ImageDataGenerator(rescale=1.\/255)$/;"	kind:variable	line:72
+test_dir	../prepare_data.py	/^test_dir = os.path.join(base_dir, 'test1')$/;"	kind:variable	line:29
+test_dogs_dir	../prepare_data.py	/^test_dogs_dir = os.path.join(test_dir, 'dogs')$/;"	kind:variable	line:53
+thresholder.py	../venv/bin/thresholder.py	1;"	kind:file	line:1
+title	../venv/bin/pilprint.py	/^        title = description(filepath, im)$/;"	kind:variable	line:75
+tkinter	../venv/bin/enhancer.py	/^    import Tkinter as tkinter$/;"	kind:namespace	line:15
+tkinter	../venv/bin/enhancer.py	/^    import tkinter$/;"	kind:namespace	line:13
+tkinter	../venv/bin/painter.py	/^    import Tkinter as tkinter$/;"	kind:namespace	line:17
+tkinter	../venv/bin/painter.py	/^    import tkinter$/;"	kind:namespace	line:15
+tkinter	../venv/bin/player.py	/^    import Tkinter as tkinter$/;"	kind:namespace	line:14
+tkinter	../venv/bin/player.py	/^    import tkinter$/;"	kind:namespace	line:12
+tkinter	../venv/bin/thresholder.py	/^    import Tkinter as tkinter$/;"	kind:namespace	line:15
+tkinter	../venv/bin/thresholder.py	/^    import tkinter$/;"	kind:namespace	line:13
+tkinter	../venv/bin/viewer.py	/^    import Tkinter as tkinter$/;"	kind:namespace	line:14
+tkinter	../venv/bin/viewer.py	/^    import tkinter$/;"	kind:namespace	line:12
+top	../venv/bin/pildriver.py	/^    def top(self):$/;"	kind:member	line:75
+traceback	../venv/bin/pilfile.py	/^        import traceback$/;"	kind:namespace	line:98
+train_cats_dir	../prepare_data.py	/^train_cats_dir = os.path.join(train_dir, 'cats')$/;"	kind:variable	line:33
+train_datagen	../cats_and_dogs_covnet.py	/^train_datagen = ImageDataGenerator($/;"	kind:variable	line:62
+train_dir	../cats_and_dogs_covnet.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:50
+train_dir	../prepare_data.py	/^train_dir = os.path.join(base_dir, 'train')$/;"	kind:variable	line:25
+train_dogs_dir	../prepare_data.py	/^train_dogs_dir = os.path.join(train_dir, 'dogs')$/;"	kind:variable	line:37
+train_generator	../cats_and_dogs_covnet.py	/^train_generator = train_datagen.flow_from_directory($/;"	kind:variable	line:74
+update	../venv/bin/enhancer.py	/^    def update(self, value):$/;"	kind:member	line:42
+update_scale	../venv/bin/thresholder.py	/^    def update_scale(self, value):$/;"	kind:member	line:46
+usage	../venv/bin/pilconvert.py	/^def usage():$/;"	kind:function	line:25
+val_acc	../cats_and_dogs_covnet.py	/^val_acc = history.history['val_acc']$/;"	kind:variable	line:148
+val_loss	../cats_and_dogs_covnet.py	/^val_loss = history.history['val_loss']$/;"	kind:variable	line:150
+validation_cats_dir	../prepare_data.py	/^validation_cats_dir = os.path.join(validation_dir, 'cats')$/;"	kind:variable	line:41
+validation_data	../cats_and_dogs_covnet.py	/^      validation_data=validation_generator,$/;"	kind:variable	line:139
+validation_dir	../cats_and_dogs_covnet.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:51
+validation_dir	../prepare_data.py	/^validation_dir = os.path.join(base_dir, 'validation')$/;"	kind:variable	line:27
+validation_dogs_dir	../prepare_data.py	/^validation_dogs_dir = os.path.join(validation_dir, 'dogs')$/;"	kind:variable	line:45
+validation_generator	../cats_and_dogs_covnet.py	/^validation_generator = test_datagen.flow_from_directory($/;"	kind:variable	line:82
+validation_steps	../cats_and_dogs_covnet.py	/^      validation_steps=50)$/;"	kind:variable	line:140
+verbose	../venv/bin/pildriver.py	/^    verbose = 0$/;"	kind:variable	line:58
+verbose	../venv/bin/pilfile.py	/^        verbose = 1$/;"	kind:variable	line:57
+verify	../venv/bin/pilfile.py	/^        verify = 1$/;"	kind:variable	line:61
+viewer.py	../venv/bin/viewer.py	1;"	kind:file	line:1
+width_shift_range	../cats_and_dogs_covnet.py	/^        width_shift_range=0.2,$/;"	kind:variable	line:65
+workspace_dir	../cats_and_dogs_covnet.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:48
+workspace_dir	../model_manager.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:20
+workspace_dir	../prepare_data.py	/^workspace_dir = os.path.dirname(os.path.realpath(__file__))$/;"	kind:variable	line:11
+zoom_range	../cats_and_dogs_covnet.py	/^        zoom_range=0.2,$/;"	kind:variable	line:68
